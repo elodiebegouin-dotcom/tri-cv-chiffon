@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>CHIFFON · Tri de CV</title>
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="entete">
+    <div class="marque">
+      <img src="assets/img/logo.svg" alt="" class="logo">
+      <div>
+        <div class="marque-nom">chiffon</div>
+        <div class="marque-sous">Tri de CV · Équipe RH</div>
+      </div>
+    </div>
+    <nav class="onglets" role="tablist">
+      <button data-vue="tableau" class="actif">Tableau de bord</button>
+      <button data-vue="candidats">Candidatures</button>
+      <button data-vue="classement">Classement</button>
+      <button data-vue="postes">Postes &amp; critères</button>
+      <button data-vue="reglages">Paramètres &amp; RGPD</button>
+    </nav>
+    <label class="interrupteur" title="Masque e-mail, téléphone, liens, âge et nom dans l'affichage">
+      <input type="checkbox" id="anonyme">
+      <span class="piste"></span>
+      <span>Mode anonyme</span>
+    </label>
+  </header>
+
+  <main id="vue" class="vue" aria-live="polite"></main>
+
+  <div id="tiroir" class="tiroir" hidden>
+    <div class="tiroir-fond" data-fermer></div>
+    <aside class="tiroir-panneau" role="dialog" aria-modal="true" id="tiroir-contenu"></aside>
+  </div>
+
+  <div id="modale" class="modale" hidden>
+    <div class="modale-fond" data-fermer></div>
+    <div class="modale-boite" role="dialog" aria-modal="true" id="modale-contenu"></div>
+  </div>
+
+  <div id="toast" class="toast" hidden></div>
+
+  <footer class="pied">
+    Les CV sont stockés uniquement dans ce navigateur et supprimés automatiquement à échéance.
+    L'outil aide à trier : la décision reste humaine.
+  </footer>
+
+  <script src="assets/vendor/pdf.min.js"></script>
+  <script src="assets/vendor/mammoth.browser.min.js"></script>
+  <script src="assets/js/referentiel.js"></script>
+  <script src="assets/js/moteur.js"></script>
+  <script src="assets/js/exemple-annexe2.js"></script>
+  <script src="assets/js/stockage.js"></script>
+  <script src="assets/js/ia.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
